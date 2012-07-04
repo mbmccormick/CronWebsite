@@ -44,13 +44,23 @@
                         Endpoint</label><br />
                     <asp:TextBox ID="txtEndpoint" runat="server"></asp:TextBox><br />
                     <span class="hint">The HTTP endpoint that will be retrieved when this job is executed.</span>
-                </div>                
+                </div>
                 <div class="field">
                     <label>
                         Next Occurrence</label><br />
                     <asp:TextBox ID="txtNextOccurrence" runat="server" ReadOnly="true"></asp:TextBox><br />
                     <span class="hint">The next date and time that this job will be executed, in UTC time.</span>
                 </div>
+            </div>
+            <div id="aside">
+                <b>Details</b>
+                <p>
+                    This job was last executed on
+                    <asp:Label ID="lblLastOccurrence" runat="server"></asp:Label>
+                    and
+                    <asp:Label ID="lblLastStatus" runat="server"></asp:Label>. Click
+                    <asp:HyperLink ID="lnkInformation" runat="server" Text="here"></asp:HyperLink>
+                    to view more information.</p>
             </div>
             <br />
             <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update Job" />

@@ -76,6 +76,33 @@ namespace CronWebsite {
         protected global::System.Web.UI.WebControls.TextBox txtNextOccurrence;
         
         /// <summary>
+        /// lblLastOccurrence control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLastOccurrence;
+        
+        /// <summary>
+        /// lblLastStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLastStatus;
+        
+        /// <summary>
+        /// lnkInformation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink lnkInformation;
+        
+        /// <summary>
         /// btnUpdate control.
         /// </summary>
         /// <remarks>

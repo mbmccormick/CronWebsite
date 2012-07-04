@@ -34,6 +34,18 @@ namespace CronWebsite
             this.txtEndpoint.Text = schedule.Endpoint;
             this.txtNextOccurrence.Text = schedule.NextOccurrence.ToString();
 
+            this.lnkInformation.NavigateUrl = "~/information.aspx?id=" + schedule.ID;
+
+            // fetch last information
+            Common.Information information = schedule.Informations.OrderByDescending(z => z.CreatedDate).FirstOrDefault();
+
+            // set form properties
+            this.lblLastOccurrence.Text = information.CreatedDate.ToString();
+            if (information.Result == 200)
+                this.lblLastStatus.Text = "succeeded with a status code of " + information.Result.ToString();
+            else
+                this.lblLastStatus.Text = "failed with a status code of " + information.Result.ToString();
+
             // close connection
             db.Dispose();
         }

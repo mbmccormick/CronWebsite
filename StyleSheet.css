@@ -55,6 +55,26 @@ a, a:visited, a:active
     padding: 40px 0px;
 }
 
+#aside
+{
+    width: 260px;
+    float: right;
+    position: absolute;
+    top: 177px;
+    left: 50%;
+    margin-left: 190px;
+}
+
+#aside b
+{
+    font-size: large;   
+}
+
+#aside p
+{
+    line-height: 1.5em;
+}
+
 #results table
 {
     width: 100%;
