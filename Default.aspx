@@ -24,8 +24,8 @@
                 <asp:DataGrid ID="grdResults" runat="server" AutoGenerateColumns="false">
                     <Columns>
                         <asp:HyperLinkColumn DataTextField="Name" DataNavigateUrlField="ID" DataNavigateUrlFormatString="~/edit.aspx?id={0}"
-                            HeaderText="Name" HeaderStyle-Width="160"></asp:HyperLinkColumn>
-                        <asp:BoundColumn DataField="Occurrence" HeaderText="Schedule" HeaderStyle-Width="160">
+                            HeaderText="Name" HeaderStyle-Width="180"></asp:HyperLinkColumn>
+                        <asp:BoundColumn DataField="Occurrence" HeaderText="Schedule" HeaderStyle-Width="180">
                         </asp:BoundColumn>
                         <asp:BoundColumn DataField="Endpoint" HeaderText="Endpoint"></asp:BoundColumn>
                     </Columns>
