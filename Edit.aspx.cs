@@ -52,7 +52,7 @@ namespace CronWebsite
 
             // set schedule properties
             schedule.Name = this.txtName.Text;
-            schedule.Occurrence = this.txtOccurrence.Text;
+            schedule.Occurrence = CrontabSchedule.Parse(this.txtOccurrence.Text).ToString();
             schedule.NextOccurrence = CrontabSchedule.Parse(schedule.Occurrence).GetNextOccurrence(DateTime.UtcNow);
             schedule.Endpoint = this.txtEndpoint.Text;
             
