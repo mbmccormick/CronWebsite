@@ -32,6 +32,7 @@ a, a:visited, a:active
     margin: 10px 0px;
     color: #0CA2DA;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 #header #title
