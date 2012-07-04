@@ -32,6 +32,7 @@ namespace CronWebsite
             this.txtName.Text = schedule.Name;
             this.txtOccurrence.Text = schedule.Occurrence;
             this.txtEndpoint.Text = schedule.Endpoint;
+            this.txtNextOccurrence.Text = schedule.NextOccurrence.ToString();
 
             // close connection
             db.Dispose();

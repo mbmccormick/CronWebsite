@@ -44,6 +44,12 @@
                         Endpoint</label><br />
                     <asp:TextBox ID="txtEndpoint" runat="server"></asp:TextBox><br />
                     <span class="hint">The HTTP endpoint that will be retrieved when this job is executed.</span>
+                </div>                
+                <div class="field">
+                    <label>
+                        Next Occurrence</label><br />
+                    <asp:TextBox ID="txtNextOccurrence" runat="server" ReadOnly="true"></asp:TextBox><br />
+                    <span class="hint">The next date and time that this job will be executed, in UTC time.</span>
                 </div>
             </div>
             <br />
