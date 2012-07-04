@@ -1,0 +1,176 @@
+﻿body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Segoe UI, Arial;
+}
+
+a, a:visited, a:active
+{
+    color: #0CA2DA;
+}
+
+#page
+{
+}
+
+#header
+{
+}
+
+#header #toolbar
+{
+    width: 860px;
+    margin: 0px auto;
+}
+
+#header #toolbar h1
+{
+    font-size: x-large;
+    padding: 5px 0px;
+    color: #0CA2DA;
+    cursor: pointer;
+}
+
+#header #title
+{
+    background-color: #F3F3F3;
+}
+
+#header #title h1
+{
+    width: 860px;
+    margin: 0px auto;
+    font-weight: normal;
+    padding: 20px 0px;
+}
+
+#content
+{
+    width: 860px;
+    margin: 0px auto;
+    padding: 60px 0px;
+}
+
+#results table
+{
+    width: 100%;
+}
+
+#results table tr
+{
+    font-family: Consolas, Deja Vu Sans Mono, Bitstream Vera Sans Mono, Monaco, Courier New;
+}
+
+#results table tr:first-child
+{
+    font-weight: bold;
+    background-color: #F8F8F8;
+    font-family: Segoe UI, Arial;
+}
+
+#results table tr td
+{
+    padding: 9px;
+    border: 1px solid #aaaaaa;
+}
+
+input[type="submit"]
+{
+    padding: 10px;
+    font-size: larger;
+    margin-left: -3px;
+}
+
+#form
+{
+}
+
+#form #errors
+{
+    border: 1px solid #F40F40;
+    background-color: #FFC0AA;   
+    margin-bottom: 20px;
+    margin-top: -10px;
+    padding: 20px;
+    padding-bottom: 15px;
+}
+
+#form #errors ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#form #errors ul li
+{
+    color: #B31515;
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-bottom: 10px;
+}
+
+#form .field
+{
+    margin-bottom: 20px;
+}
+
+#form .field label
+{
+    font-weight: bold;
+    font-size: large;
+}
+
+#form .field input
+{
+    font-family: Consolas, Deja Vu Sans Mono, Bitstream Vera Sans Mono, Monaco, Courier New;
+    font-size: x-large;
+    width: 550px;
+    padding: 5px;
+}
+
+a.delete
+{
+    color: #B31515;
+    font-size: large;
+    margin-left: 10px;
+}
+
+a.cancel
+{
+    font-size: large;
+    margin-left: 10px;
+}
+
+#footer
+{
+    background-color: #333333;
+    margin-top: 10px;
+}
+
+#footer #links
+{
+    width: 860px;
+    margin: 0px auto;
+    padding: 50px 0px;
+    padding-bottom: 2px;
+    padding-top: 50px;
+    color: #ffffff;
+}
+
+#footer #links a
+{
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+#footer #copyright
+{
+    width: 860px;
+    margin: 0px auto;
+    padding-top: 2px;
+    padding-bottom: 50px;
+    color: #6F6F6F;
+}
