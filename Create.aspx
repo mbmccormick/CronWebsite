@@ -29,17 +29,21 @@
                 <div class="field">
                     <label>
                         Name</label><br />
-                    <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtName" runat="server"></asp:TextBox><br />
+                    <span class="hint">The name for this job, that will be displayed throughout the website.</span>
                 </div>
                 <div class="field">
                     <label>
                         Schedule</label><br />
-                    <asp:TextBox ID="txtOccurrence" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtOccurrence" runat="server"></asp:TextBox><br />
+                    <span class="hint">The recurrence pattern for this job in <a href="http://en.wikipedia.org/wiki/Cron#CRON_expression" target="_blank">crontab expression</a>
+                        format.</span>
                 </div>
                 <div class="field">
                     <label>
                         Endpoint</label><br />
-                    <asp:TextBox ID="txtEndpoint" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtEndpoint" runat="server"></asp:TextBox><br />
+                    <span class="hint">The HTTP endpoint that will be retrieved when this job is executed.</span>
                 </div>
             </div>
             <br />

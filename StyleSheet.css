@@ -50,7 +50,7 @@ a, a:visited, a:active
 {
     width: 860px;
     margin: 0px auto;
-    padding: 60px 0px;
+    padding: 40px 0px;
 }
 
 #results table
@@ -131,6 +131,11 @@ input[type="submit"]
     padding: 5px;
 }
 
+#form .field .hint
+{
+    color: #aaaaaa;
+}
+
 a.delete
 {
     color: #B31515;
@@ -147,7 +152,7 @@ a.cancel
 #footer
 {
     background-color: #333333;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #footer #links
@@ -156,7 +161,7 @@ a.cancel
     margin: 0px auto;
     padding: 50px 0px;
     padding-bottom: 2px;
-    padding-top: 50px;
+    padding-top: 60px;
     color: #ffffff;
 }
 
