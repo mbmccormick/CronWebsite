@@ -1,9 +1,10 @@
-﻿body
+﻿html, body
 {
     margin: 0;
     padding: 0;
     width: 100%;
     font-family: Segoe UI, Arial;
+    height: 100%;
 }
 
 a, a:visited, a:active
@@ -11,8 +12,19 @@ a, a:visited, a:active
     color: #0CA2DA;
 }
 
+form
+{
+    height: 100%;
+}
+
 #page
 {
+    height: 100%;
+}
+
+#body
+{
+    min-height: 100%;
 }
 
 #header
@@ -102,7 +114,7 @@ input[type="submit"]
 {
     padding: 10px;
     font-size: larger;
-    margin-left: -3px;
+    margin-left: -1px;
 }
 
 #form
@@ -194,7 +206,7 @@ a.cancel
 
 #footer #links a
 {
-    padding-right: 20px;
+    margin-right: 20px;
     color: #ffffff;
 }
 
