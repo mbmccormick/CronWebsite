@@ -25,7 +25,7 @@ namespace CronWebsite
             DatabaseDataContext db = new DatabaseDataContext();
 
             // bind schedules to display
-            this.grdResults.DataSource = db.Schedules.OrderBy(z => z.Name);
+            this.grdResults.DataSource = db.Schedules.Where(z => z.AccountID == (Session["CurrentAccount"] as Account).ID).OrderBy(z => z.Name);
             this.grdResults.DataBind();
 
             // close connection
