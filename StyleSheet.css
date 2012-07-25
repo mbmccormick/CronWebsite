@@ -45,6 +45,28 @@ form
     color: #0CA2DA;
     cursor: pointer;
     text-transform: uppercase;
+    width: 200px;
+}
+
+#header #toolbar #nav
+{
+    float: right;
+    margin-top: -38px;
+}
+
+#header #toolbar #nav li
+{
+    list-style: none;
+    display: inline;
+    margin: 0px 0px 0px 40px;
+    padding: 0;
+}
+
+#header #toolbar #nav li a
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: #333333;
 }
 
 #header #title
@@ -85,6 +107,13 @@ form
 #aside p
 {
     line-height: 1.5em;
+}
+
+#hero
+{
+    font-weight: bold;
+    font-size: 450%;
+    width: 70%;
 }
 
 #results table
@@ -140,6 +169,31 @@ input[type="submit"]
 #form #errors ul li
 {
     color: #B31515;
+    list-style: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-bottom: 10px;
+}
+
+#form #success
+{
+    border: 1px solid #4AB025;
+    background-color: #B4ED9F;   
+    margin-bottom: 20px;
+    margin-top: -10px;
+    padding: 20px;
+    padding-bottom: 15px;
+}
+
+#form #success ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#form #success ul li
+{
+    color: #508A3B;
     list-style: none;
     margin-left: 0px;
     padding-left: 0px;

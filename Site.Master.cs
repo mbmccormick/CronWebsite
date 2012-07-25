@@ -7,19 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace CronWebsite
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Site : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["CurrentAccount"] != null)
+            if (Session["CurrentAccount"] == null)
             {
-                Response.Redirect("~/dashboard.aspx");
+                Response.Redirect("~/login.aspx");
             }
-        }
-
-        protected void btnLearnMore_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
