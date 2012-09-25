@@ -30,7 +30,7 @@ namespace CronWebsite
 
             // set schedule properties
             schedule.ID = Guid.NewGuid();
-            schedule.AccountID = (Session["CurrentAccount"] as Account).ID;
+            schedule.AccountID = (Session["CurrentAccount"] as Common.Account).ID;
             schedule.Name = this.txtName.Text;
             schedule.Occurrence = CrontabSchedule.Parse(this.txtOccurrence.Text).ToString();
             schedule.NextOccurrence = CrontabSchedule.Parse(schedule.Occurrence).GetNextOccurrence(DateTime.UtcNow);

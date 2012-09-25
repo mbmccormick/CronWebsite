@@ -49,7 +49,8 @@
             and
             <asp:Label ID="lblLastStatus" runat="server"></asp:Label>. Click
             <asp:HyperLink ID="lnkInformation" runat="server" Text="here"></asp:HyperLink>
-            to view more information.</p>
+            to view more information.
+        </p>
     </div>
     <br />
     <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update Job" />

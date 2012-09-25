@@ -11,38 +11,38 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="page">
-        <div id="body">
-            <div id="header">
-                <div id="toolbar">
-                    <h1 onclick="location.href = 'default.aspx';">
-                        Azure Cron</h1>
-                    <ul id="nav">
-                        <li><a href="dashboard.aspx">Dashboard</a></li>
-                        <li><a href="account.aspx">Account</a></li>
-                        <li><a href="logout.aspx">Sign Out</a></li>
-                    </ul>
+        <div id="page">
+            <div id="body">
+                <div id="header">
+                    <div id="toolbar">
+                        <h1 onclick="location.href = 'default.aspx';">Azure Cron</h1>
+                        <ul id="nav">
+                            <li><a href="dashboard.aspx">Dashboard</a></li>
+                            <li><a href="account.aspx">Account</a></li>
+                            <li><a href="logout.aspx">Sign Out</a></li>
+                        </ul>
+                    </div>
+                    <div id="title">
+                        <h1>
+                            <%=Page.Title%></h1>
+                    </div>
                 </div>
-                <div id="title">
-                    <h1>
-                        <%=Page.Title%></h1>
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
                 </div>
             </div>
-            <div id="content">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
+            <div id="footer">
+                <div id="links">
+                    <a href="#">About</a> <a href="#">Contact</a> <a href="#">Terms</a> <a href="#">Privacy</a>
+                </div>
+                <div id="copyright">
+                    <p>
+                        &copy; 2012 Matt McCormick
+                    </p>
+                </div>
             </div>
         </div>
-        <div id="footer">
-            <div id="links">
-                <a href="#">About</a> <a href="#">Contact</a> <a href="#">Terms</a> <a href="#">Privacy</a>
-            </div>
-            <div id="copyright">
-                <p>
-                    &copy; 2012 Matt McCormick</p>
-            </div>
-        </div>
-    </div>
     </form>
 </body>
 </html>

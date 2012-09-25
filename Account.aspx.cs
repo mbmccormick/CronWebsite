@@ -8,14 +8,33 @@ using CronWebsite.Common;
 
 namespace CronWebsite
 {
-    public partial class Register : System.Web.UI.Page
+    public partial class Account : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Page.IsPostBack == false)
+            {
+                // bind data to page
+                this.BindData();
+            }
         }
 
-        protected void btnRegister_Click(object sender, EventArgs e)
+        private void BindData()
+        {
+            // connect to database
+            DatabaseDataContext db = new DatabaseDataContext();
+
+            // fetch current account
+            Common.Account account = db.Accounts.SingleOrDefault(z => z.ID == (Session["CurrentAccount"] as Common.Account).ID);
+
+            // set form properties
+            this.txtEmailAddress.Text = account.EmailAddress;
+
+            // close connection
+            db.Dispose();
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
         {
             // validate input
             if (this.ValidateInput() == false)
@@ -24,25 +43,24 @@ namespace CronWebsite
             // connect to database
             DatabaseDataContext db = new DatabaseDataContext();
 
-            // create new account
-            Common.Account account = new Common.Account();
+            // fetch current account
+            Common.Account account = db.Accounts.SingleOrDefault(z => z.ID == (Session["CurrentAccount"] as Common.Account).ID);
 
-            // set account properties
-            account.ID = Guid.NewGuid();
+            // set schedule properties
             account.EmailAddress = this.txtEmailAddress.Text;
-            account.Password = Utilities.HashPassword(this.txtPassword.Text);
-            account.Type = 1;
-            account.CreatedDate = DateTime.UtcNow;
+            if (this.txtPassword.Text != "")
+            {
+                account.Password = Utilities.HashPassword(this.txtPassword.Text);
+            }
 
-            // insert account to database
-            db.Accounts.InsertOnSubmit(account);
+            // update schedule in database
             db.SubmitChanges();
 
             // close connection
             db.Dispose();
 
-            // redirect to default page
-            Response.Redirect("~/login.aspx?success=true");
+            // bind data to page
+            this.BindData();
         }
 
         private bool ValidateInput()
@@ -97,10 +115,23 @@ namespace CronWebsite
             }
         }
 
-        protected void btnCancel_Click(object sender, EventArgs e)
+        protected void btnDelete_Click(object sender, EventArgs e)
         {
-            // redirect to create page
-            Response.Redirect("~/dashboard.aspx");
+            // connect to database
+            DatabaseDataContext db = new DatabaseDataContext();
+
+            // fetch current account
+            Common.Account account = db.Accounts.SingleOrDefault(z => z.ID == (Session["CurrentAccount"] as Common.Account).ID);
+
+            // delete account from database
+            db.Accounts.DeleteOnSubmit(account);
+            db.SubmitChanges();
+
+            // close connection
+            db.Dispose();
+
+            // redirect to logout page
+            Response.Redirect("~/logout.aspx");
         }
     }
 }
