@@ -59,6 +59,9 @@ namespace CronWebsite
             // close connection
             db.Dispose();
 
+            // update schedule in session
+            Session["CurrentAccount"] = account;
+
             // bind data to page
             this.BindData();
         }
