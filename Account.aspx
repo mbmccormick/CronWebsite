@@ -23,13 +23,13 @@
         <div class="field">
             <label>
                 Password</label><br />
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox><br />
             <span class="hint">The new password for your account, will not change if empty.</span>
         </div>
         <div class="field">
             <label>
                 Confirm Password</label><br />
-            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox><br />
             <span class="hint">Confirm your password change.</span>
         </div>
     </div>

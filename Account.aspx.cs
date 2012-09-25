@@ -48,7 +48,7 @@ namespace CronWebsite
 
             // set schedule properties
             account.EmailAddress = this.txtEmailAddress.Text;
-            if (this.txtPassword.Text != "")
+            if (this.txtPassword.Text.Length > 0)
             {
                 account.Password = Utilities.HashPassword(this.txtPassword.Text);
             }
@@ -75,17 +75,20 @@ namespace CronWebsite
                 errors.Add("Your email address must be 50 characters or less.");
 
             // validate password field
-            if (this.txtPassword.Text != this.txtConfirmPassword.Text)
-                errors.Add("Your passwords do not match.");
+            if (this.txtPassword.Text.Length > 0)
+            {
+                if (this.txtPassword.Text != this.txtConfirmPassword.Text)
+                    errors.Add("Your passwords do not match.");
 
-            if (this.txtPassword.Text.Length <= 0)
-                errors.Add("Your must choose a password.");
+                if (this.txtPassword.Text.Length <= 0)
+                    errors.Add("Your must choose a password.");
 
-            if (this.txtPassword.Text.Length < 6)
-                errors.Add("Your password must be at least 6 characters.");
+                if (this.txtPassword.Text.Length < 6)
+                    errors.Add("Your password must be at least 6 characters.");
 
-            if (this.txtPassword.Text.Length > 50)
-                errors.Add("Your password must be 50 characters or less.");
+                if (this.txtPassword.Text.Length > 50)
+                    errors.Add("Your password must be 50 characters or less.");
+            }
 
             // display errors on the page
             if (errors.Count > 0)
