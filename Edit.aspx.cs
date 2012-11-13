@@ -39,12 +39,20 @@ namespace CronWebsite
             // fetch last information
             Common.Information information = schedule.Informations.OrderByDescending(z => z.CreatedDate).FirstOrDefault();
 
-            // set form properties
-            this.lblLastOccurrence.Text = information.CreatedDate.ToString();
-            if (information.Result == 200)
-                this.lblLastStatus.Text = "succeeded with a status code of " + information.Result.ToString();
+            if (information != null)
+            {
+                // set form properties
+                this.lblLastOccurrence.Text = "This job was last executed on " + information.CreatedDate.ToString();
+                if (information.Result == 200)
+                    this.lblLastStatus.Text = "succeeded with a status code of " + information.Result.ToString();
+                else
+                    this.lblLastStatus.Text = "failed with a status code of " + information.Result.ToString();
+            }
             else
-                this.lblLastStatus.Text = "failed with a status code of " + information.Result.ToString();
+            {
+                this.lblLastOccurrence.Text = "This job has not been excuted";
+                this.lblLastStatus.Text = "does not have a status yet";
+            }
 
             // close connection
             db.Dispose();

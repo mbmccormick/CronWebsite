@@ -44,7 +44,6 @@
     <div id="aside">
         <b>Details</b>
         <p>
-            This job was last executed on
             <asp:Label ID="lblLastOccurrence" runat="server"></asp:Label>
             and
             <asp:Label ID="lblLastStatus" runat="server"></asp:Label>. Click
